@@ -16,10 +16,10 @@ public class BreakCamelCase {
         String result = "";
         for (int i = 0; i < input.length(); i++) {
             if (Character.isUpperCase(input.charAt(i))) {
-                result += " " + input.charAt(i);
-            } else {
-                result += input.charAt(i);
+                result += " ";
             }
+            result += input.charAt(i);
+
         }
         return result;
     }
