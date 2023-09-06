@@ -5,6 +5,6 @@ package lt.gerasimovas;
  */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        // \u000d System.out.println("Hello World!");
     }
 }
