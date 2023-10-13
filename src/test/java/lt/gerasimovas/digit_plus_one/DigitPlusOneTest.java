@@ -13,11 +13,13 @@ public class DigitPlusOneTest {
         digitPlusOne = new DigitPlusOne();
     }
 
+    //1
     @Test
     void plusOneIsNine() {
         int[] digits = {8};
         int[] result = digitPlusOne.returnDigitPlusOne(digits);
-        assertEquals(new int[]{9}, result);
+        int[] expected = {9};
+        assertEquals(expected, result);
     }
 
     @Test
