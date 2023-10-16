@@ -13,17 +13,15 @@ public class DuplicateMain {
 
     }
 
-    public static boolean duplicateContain(int[] numbers){
+    public static boolean duplicateContain(int[] numbers) {
         Set<Integer> numbersSets = new HashSet<>();
 
-        for (int i = 0; i < numbers.length; i++){
-            if (numbersSets.contains(numbers[i])){
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbersSets.contains(numbers[i])) {
                 return true;
-            } else {
-                numbersSets.add(numbers[i]);
             }
+            numbersSets.add(numbers[i]);
         }
-
         return false;
     }
 }
