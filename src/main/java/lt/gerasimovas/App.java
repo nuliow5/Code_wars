@@ -17,5 +17,25 @@ public class App {
 
         List<Integer> myList = new LinkedList<>();
         List<Integer> myList1 = new ArrayList<>();
+
+        StringBuilder shortedWord = new StringBuilder("labas");
+        shortedWord.delete(0, shortedWord.length());
+        shortedWord.append("viso");
+        System.out.println(shortedWord);
+
+        String flower = "abc";
+        String flow = "ab";
+
+
+
+//        System.out.println(flower.charAt(1) == flow.charAt(1));
+
+        StringBuilder result = new StringBuilder("");
+        result.insert(0, flow.charAt(0));
+        result.insert(0, flow.charAt(1));
+
+
+        System.out.println(":::: " + result);
+
     }
 }
