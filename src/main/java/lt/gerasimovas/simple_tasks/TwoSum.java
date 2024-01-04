@@ -1,4 +1,4 @@
-package lt.gerasimovas.leetcode;
+package lt.gerasimovas.simple_tasks;
 
 
 import java.util.Arrays;
