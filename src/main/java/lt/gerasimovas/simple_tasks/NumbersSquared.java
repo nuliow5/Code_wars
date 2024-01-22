@@ -11,69 +11,21 @@ public class NumbersSquared {
     }
 
     public static int[] squareUp(int[] numbers) {
-        int low = 0;
-        int high = numbers.length - 1;
-
-        while (low >= high){
-            //todo
-        }
-        return null;
-    }
-
-
-    public static int[] squareUp1(int[] numbers) {
         int[] result = new int[numbers.length];
-        int countNegative = 0;
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0) {
-                int modul = numbers[i] * -1;
-                //cheking whare is modul spote is
-                for (int j = i + 1; j < numbers.length; j++) {
-                    if (modul <= numbers[j]) {
-                        int newSpot = j - 1;
-                        result[newSpot - countNegative] = numbers[i] * numbers[i];
-                        countNegative++;
-//                        for (int k = i; k < newSpot; k++) {
-//                           numbers[k] = numbers[k+1] * numbers[k+1];
-//                        }
-//                        numbers[newSpot] = modul * modul;
-//                        i--;
-                    }
-                }
-
-            } else {
-                result[i] = numbers[i] * numbers[i];
-            }
-
-
-        }
-
-        return result;
-    }
-
-    public static int[] squareUp2(int[] numbers) {
-        int[] result = new int[numbers.length];
-        int modul;
-        int spot;
-        int countArrayTransform = 0;
-
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0) {
-                modul = numbers[i] * -1;
-                for (int j = i + 1; j < numbers.length - countArrayTransform; j++) {
-                    if (numbers[j] >= modul) {
-                        spot = j - 1;
-                        numbers[spot] = modul; //spot
-
-                    } else {
-                        numbers[j - 1] = numbers[j];
-                    }
-                }
-                countArrayTransform++;
+        int left = 0;
+        int right = numbers.length - 1;
+        int i = numbers.length - 1;
+        while (left <= right) {
+            if (Math.abs(numbers[left]) > Math.abs(numbers[right])) {
+                result[i] = numbers[left] * numbers[left];
                 i--;
+                left++;
+            } else {
+                result[i] = numbers[right] * numbers[right];
+                i--;
+                right--;
             }
         }
-
-        return numbers;
+        return result;
     }
 }
